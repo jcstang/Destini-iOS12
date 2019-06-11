@@ -44,9 +44,10 @@ class ViewController: UIViewController {
         
         
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
-        storyTextView.text = story1
-        topButton.setTitle(answer1a, for: .normal)
-        bottomButton.setTitle(answer1b, for: .normal)
+        //storyTextView.text = story1
+        //topButton.setTitle(answer1a, for: .normal)
+        //bottomButton.setTitle(answer1b, for: .normal)
+        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
         
     }
 
@@ -59,6 +60,16 @@ class ViewController: UIViewController {
         // TODO Step 6: Modify the IF-Statement to complete the story
         
     
+    }
+    
+    func startGame() {
+        
+    }
+    
+    func updateUI(displayStory: String, topBtnAnswer: String, botBtnAnswer: String) {
+        storyTextView.text = displayStory
+        topButton.setTitle(topBtnAnswer, for: .normal)
+        bottomButton.setTitle(botBtnAnswer, for: .normal)
     }
     
 
