@@ -35,7 +35,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var storyTextView: UILabel!
     
     // TODO Step 5: Initialise instance variables here
+    var T1_Story: String = ""
+    var T1_Ans1: String = ""
+    var T1_Ans2: String = ""
     
+    var currentStory: Int = 1
     
     
     
@@ -47,7 +51,14 @@ class ViewController: UIViewController {
         //storyTextView.text = story1
         //topButton.setTitle(answer1a, for: .normal)
         //bottomButton.setTitle(answer1b, for: .normal)
+        
+        //** start off with first story and answers **
+        T1_Story = story1
+        T1_Ans1 = answer1a
+        T1_Ans2 = answer1b
+        updateUI(displayStory: T1_Story, topBtnAnswer: T1_Ans1, botBtnAnswer: T1_Ans2)
         updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        
         
     }
 
@@ -56,14 +67,42 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
     
         // TODO Step 4: Write an IF-Statement to update the views
+        if sender.tag == 1 {
+            print("You selected top button!")
+            // TODO load the chosen path information (story and answers)
+            // if coming from story1 go to Story 3
+            if currentStory == 1 {
+                // load story 3
+            }
+            // if coming from story3 go to story6
+            // TODO load the chosen path information (story and answers)
+            switch currentStory {
+            case 1:
+                if sender.tag == 1 {
+                    
+                } else if sender.tag == 2 {
+                    print("You selected bottom button!")
+                }
+                //load story3 and ans3a ans3b
+                break
+            case 2: break
+            case 3: break
+            case 4: break
+            case 5: break
+            case 6: break
+            default: break
+                
+            }
+            
+            
+        } else if sender.tag == 2 {
+            print("You selected bottom button!")
+            // TODO load the chosen path information (story and answers)
+        }
                 
         // TODO Step 6: Modify the IF-Statement to complete the story
         
     
-    }
-    
-    func startGame() {
-        
     }
     
     func updateUI(displayStory: String, topBtnAnswer: String, botBtnAnswer: String) {
