@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ED30E0922B28F98008D25B9 /* Adventure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED30E0822B28F98008D25B9 /* Adventure.swift */; };
+		8ED30E0B22B2909E008D25B9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED30E0A22B2909E008D25B9 /* Story.swift */; };
 		AD6F1CCE20EBD3FC00198C34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD6F1CCD20EBD3FC00198C34 /* README.md */; };
 		EBB1C7411B9633A60011F5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1C7401B9633A60011F5C3 /* AppDelegate.swift */; };
 		EBB1C7431B9633A60011F5C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1C7421B9633A60011F5C3 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8ED30E0822B28F98008D25B9 /* Adventure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventure.swift; sourceTree = "<group>"; };
+		8ED30E0A22B2909E008D25B9 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		AD6F1CCD20EBD3FC00198C34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBB1C73B1B9633A60011F5C3 /* Destini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Destini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1C73F1B9633A60011F5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 			children = (
 				EBB1C7401B9633A60011F5C3 /* AppDelegate.swift */,
 				EBB1C7421B9633A60011F5C3 /* ViewController.swift */,
+				8ED30E0822B28F98008D25B9 /* Adventure.swift */,
+				8ED30E0A22B2909E008D25B9 /* Story.swift */,
 				EBB1C7441B9633A60011F5C3 /* Main.storyboard */,
 				EBB1C7471B9633A60011F5C3 /* Images.xcassets */,
 				EBB1C7491B9633A60011F5C3 /* LaunchScreen.xib */,
@@ -149,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB1C7431B9633A60011F5C3 /* ViewController.swift in Sources */,
+				8ED30E0922B28F98008D25B9 /* Adventure.swift in Sources */,
 				EBB1C7411B9633A60011F5C3 /* AppDelegate.swift in Sources */,
+				8ED30E0B22B2909E008D25B9 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
