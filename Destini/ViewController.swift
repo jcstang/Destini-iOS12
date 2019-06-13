@@ -68,34 +68,44 @@ class ViewController: UIViewController {
     
         // TODO Step 4: Write an IF-Statement to update the views
         
-        
         switch currentStory {
         case 1:
             if sender.tag == 1 {
                 print("You selected top button!")
-                // TODO load story3 and ans3a ans3b
+                updateUI(displayStory: story3, topBtnAnswer: answer3a, botBtnAnswer: answer3b)
                 currentStory = 3
+                
             } else if sender.tag == 2 {
                 print("You selected bottom button!")
-                // TODO load story2 and ans2a ans2b
+                updateUI(displayStory: story2, topBtnAnswer: answer2a, botBtnAnswer: answer2b)
                 currentStory = 2
             }
             break
         case 2:
             //TODO which button and load story3 or story4
+            if sender.tag == 1 {
+                print("You selected top button!")
+                //TODO update ui - story 3
+                updateUI(displayStory: story3, topBtnAnswer: answer3a, botBtnAnswer: answer3b)
+                currentStory = 3
+            } else if sender.tag == 2 {
+                print("you selected bottom button!")
+                //TODO update ui - story 4
+                updateUI(displayStory: story4, topBtnAnswer: "-", botBtnAnswer: "-")
+                currentStory = 4
+            }
             break
         case 3:
             if sender.tag == 1 {
                 print("You selected top button!")
-                // TODO load story6
+                updateUI(displayStory: story6, topBtnAnswer: "-", botBtnAnswer: "-")
+                currentStory = 6
             } else if sender.tag == 2 {
                 print("You selected bottom button!")
-                // TODO load story5
+                updateUI(displayStory: story5, topBtnAnswer: "-", botBtnAnswer: "-")
+                currentStory = 5
             }
             break
-        case 4: break
-        case 5: break
-        case 6: break
         default: break
             
         }
