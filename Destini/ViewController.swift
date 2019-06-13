@@ -29,6 +29,9 @@ class ViewController: UIViewController {
     let story6 = "You bond with the murderer while crooning verses of \"Can you feel the love tonight\". He drops you off at the next town. Before you go he asks you if you know any good places to dump bodies. You reply: \"Try the pier.\""
     
     
+    
+    
+    
     // UI Elements linked to the storyboard
     @IBOutlet weak var topButton: UIButton!         // Has TAG = 1
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
@@ -40,8 +43,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let anAdventure1: Adventure = Adventure(newStory: Story(story: story1, ansA: answer1a, ansB: answer1b))
+        anAdventure1.add(newStory: Story(story: story2, ansA: answer2a, ansB: answer2b))
+        anAdventure1.add(newStory: Story(story: story3, ansA: answer3a, ansB: answer3b))
+        anAdventure1.add(newStory: Story(story: story4, ansA: "-", ansB: "-"))
+        anAdventure1.add(newStory: Story(story: story5, ansA: "-", ansB: "-"))
+        anAdventure1.add(newStory: Story(story: story6, ansA: "-", ansB: "-"))
+        print("")
+        
         //** start off with first story and answers **
-        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        updateUI(displayStory: anAdventure1.storyList[0].storyText, topBtnAnswer: anAdventure1.storyList[0].answerA, botBtnAnswer: anAdventure1.storyList[0].answerB)
+        //updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
         
     }
 
@@ -103,6 +115,8 @@ class ViewController: UIViewController {
         bottomButton.setTitle(botBtnAnswer, for: .normal)
         print("loaded \(currentStory)")
     }
+    
+    func 
     
 
 

@@ -9,11 +9,32 @@
 import Foundation
 
 class Adventure {
-    var storyList: Array<
-    
-    
-    
+    var storyList: Array<Story>
+    var currentStoryIndex: Int
+
     init() {
-        print("hooray")
+        let someStory: Story = Story()
+        storyList = Array()
+        currentStoryIndex = 0
+        storyList.append(someStory)
     }
+    
+    init(newStory: Story) {
+        storyList = Array()
+        currentStoryIndex = 0
+        storyList.append(newStory)
+    }
+    
+    func add(newStory: Story) {
+        storyList.append(newStory)
+    }
+    
+    func storyIndexAt(num: Int) -> Story {
+        var returnStory = Story()
+        try returnStory = storyList[num]
+        currentStoryIndex = num
+        
+        return returnStory
+    }
+    
 }
