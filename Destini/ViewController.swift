@@ -43,8 +43,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //** start off with first story and answers **
-        restartButton.isHidden = true
-        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+//        restartButton.isHidden = true
+//        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        startGame()
         
     }
 
@@ -111,9 +112,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restartButtonPressed(_ sender: Any) {
-        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
-        currentStory = 1
+        //updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        //currentStory = 1
+        //restartButton.isHidden = true
+        restartGame()
+    }
+    
+    func startGame() {
         restartButton.isHidden = true
+        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+    }
+    
+    func restartGame() {
+        currentStory = 1
+        startGame()
     }
     
 
