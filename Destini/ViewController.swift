@@ -112,6 +112,7 @@ class ViewController: UIViewController {
     
     @IBAction func restartButtonPressed(_ sender: Any) {
         updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        currentStory = 1
         restartButton.isHidden = true
     }
     
