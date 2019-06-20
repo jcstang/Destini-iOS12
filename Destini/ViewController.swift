@@ -34,14 +34,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!         // Has TAG = 1
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
     @IBOutlet weak var storyTextView: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
     
     var currentStory: Int = 1
-    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //** start off with first story and answers **
+        restartButton.isHidden = true
         updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
         
     }
@@ -76,6 +78,7 @@ class ViewController: UIViewController {
                 print("you selected bottom button!")
                 currentStory = 4
                 updateUI(displayStory: story4, topBtnAnswer: "-", botBtnAnswer: "-")
+                restartButton.isHidden = false
             }
             break
         case 3:
@@ -83,10 +86,12 @@ class ViewController: UIViewController {
                 print("You selected top button!")
                 currentStory = 6
                 updateUI(displayStory: story6, topBtnAnswer: "-", botBtnAnswer: "-")
+                restartButton.isHidden = false
             } else if sender.tag == 2 {
                 print("You selected bottom button!")
                 currentStory = 5
                 updateUI(displayStory: story5, topBtnAnswer: "-", botBtnAnswer: "-")
+                restartButton.isHidden = false
             }
             break
         default: break
@@ -105,7 +110,11 @@ class ViewController: UIViewController {
         print("loaded \(currentStory)")
     }
     
-
+    @IBAction func restartButtonPressed(_ sender: Any) {
+        updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        restartButton.isHidden = true
+    }
+    
 
 
 }
