@@ -80,6 +80,8 @@ class ViewController: UIViewController {
                 currentStory = 4
                 updateUI(displayStory: story4, topBtnAnswer: "-", botBtnAnswer: "-")
                 restartButton.isHidden = false
+                topButton.isHidden = true
+                bottomButton.isHidden = true
             }
             break
         case 3:
@@ -88,11 +90,15 @@ class ViewController: UIViewController {
                 currentStory = 6
                 updateUI(displayStory: story6, topBtnAnswer: "-", botBtnAnswer: "-")
                 restartButton.isHidden = false
+                topButton.isHidden = true
+                bottomButton.isHidden = true
             } else if sender.tag == 2 {
                 print("You selected bottom button!")
                 currentStory = 5
                 updateUI(displayStory: story5, topBtnAnswer: "-", botBtnAnswer: "-")
                 restartButton.isHidden = false
+                topButton.isHidden = true
+                bottomButton.isHidden = true
             }
             break
         default: break
@@ -121,6 +127,8 @@ class ViewController: UIViewController {
     func startGame() {
         restartButton.isHidden = true
         updateUI(displayStory: story1, topBtnAnswer: answer1a, botBtnAnswer: answer1b)
+        topButton.isHidden = false
+        bottomButton.isHidden = false
     }
     
     func restartGame() {
